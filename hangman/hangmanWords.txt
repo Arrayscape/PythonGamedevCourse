@@ -13,3 +13,8 @@ science
 technology
 engineering
 math
+pygame
+boolean
+integer
+character
+binary
