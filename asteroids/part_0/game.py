@@ -24,6 +24,7 @@ class AsteroidsGame:
         # list of asteroids
         # list of bullets
         # spaceship
+        # message font object
         # game over message
 
         # TODO
@@ -40,6 +41,7 @@ class AsteroidsGame:
         # TODO
         pass
 
+    # Function to draw the sprites
     def draw_sprites(self):
         # TODO
         # draw background

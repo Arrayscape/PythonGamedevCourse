@@ -24,6 +24,7 @@ class AsteroidsGame:
         self.asteroids = []
         self.bullets = []
         self.spaceship = Spaceship((400,300), self.bullets.append) # create a new spaceship (player)
+        self.font = pygame.font.Font(None, 64)
         self.message = ""
 
         # TODO
@@ -41,6 +42,7 @@ class AsteroidsGame:
         # TODO
         pass
 
+    # Function to draw the sprites
     def draw_sprites(self):
         # TODO
         # draw background

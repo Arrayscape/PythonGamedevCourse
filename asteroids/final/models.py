@@ -35,7 +35,7 @@ class GameObject:
     def move(self, surface): 
         x, y = self.position + self.velocity
         w, h = surface.get_size()
-        position = Vector2(x % w, y % h)
+        self.position = Vector2(x % w, y % h)
 
     # Function to check if object has collided with another
     def collides_with(self, other_obj):
