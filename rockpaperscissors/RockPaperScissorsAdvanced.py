@@ -9,12 +9,12 @@ import random # a built-in module to generate random numbers
 # a dictionary containing the first letter
 #   key: a letter representing the choice of rock, paper, or scissors
 #   value: the word associated with the letter
-choiceDict = {'r': "rock", 'p': "paper", 's': "scissors"}
+choice_dict = {'r': "rock", 'p': "paper", 's': "scissors"}
 
 # a dictionary containing pairs of possible combinations of choices
 #   key: the winner
 #   value: the loser
-winnerDict = {"rock": "scissors", "paper": "rock", "scissors": "paper"}
+winner_dict = {"rock": "scissors", "paper": "rock", "scissors": "paper"}
 
 # a string containing the prompt to prompt the user for an input
 prompt = "Type the letters for your choice: \n\t \'r\' for rock \n\t \'p\' for paper \n\t \'s\' for scissors \n\t 'q' for quit\n"
@@ -22,7 +22,7 @@ prompt = "Type the letters for your choice: \n\t \'r\' for rock \n\t \'p\' for p
 # FUNCTIONS ###################################################################################################
 # Function for the bot to randomly choose a choice
 # @return: String - representing the choice of the bot 
-def botChooses():
+def bot_chooses():
     choices = ["rock", "paper", "scissors"]
     return random.choice(choices) # choose a random choice
 
@@ -31,27 +31,27 @@ print("*" * 30)
 print("WELCOME TO ROCK PAPER SCISSORS")
 print("*" * 30)
 
-userInput = input(prompt) # get the input from the user
-userInput = userInput.lower()
-while userInput != 'q' and userInput != "quit": # the program quits if the user inputs 'q' or 'quit'
-    if userInput not in choiceDict:
+user_input = input(prompt) # get the input from the user
+user_input = user_input.lower()
+while user_input != 'q' and user_input != "quit": # the program quits if the user inputs 'q' or 'quit'
+    if user_input not in choice_dict:
         print("\nPlease input a valid choice")
-        userInput = input(prompt)
+        user_input = input(prompt)
         continue # skip over to the next while loop
 
-    userInput = choiceDict[userInput] # get the word of the user's choice
-    botChoice = botChooses() # save the bot choice
+    user_input = choice_dict[user_input] # get the word of the user's choice
+    bot_choice = bot_chooses() # save the bot choice
 
     # checking who won
-    if userInput == botChoice:
+    if user_input == bot_choice:
         print("TIE")
-    elif botChoice == winnerDict[userInput]: # the bot's choice matches the loser of the pair
+    elif bot_choice == winner_dict[user_input]: # the bot's choice matches the loser of the pair
         print("YOU WIN")
     else:
         print("YOU LOSE")
 
-    print("\tYou chose " + userInput + ".\t Bot chose " + botChoice + ".\n") # output what each player chose
-    userInput = input(prompt) # reprompt the user
+    print("\tYou chose " + user_input + ".\t Bot chose " + bot_choice + ".\n") # output what each player chose
+    user_input = input(prompt) # reprompt the user
 
 # quit while loop and end game
 print("THANK YOU FOR PLAYING ROCK PAPER SCISSORS\n")

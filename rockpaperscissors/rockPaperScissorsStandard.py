@@ -13,34 +13,34 @@ print("WELCOME TO ROCK PAPER SCISSORS")
 print("*" * 30)
 
 # 1. Ask the user for their choice
-userAction = input("Enter a choice (rock, paper, scissors): ")
+user_action = input("Enter a choice (rock, paper, scissors): ")
 
 # 2. Generate a random choice for the computer player
-possibleActions = ["rock", "paper", "scissors"]
-computerAction = random.choice(possibleActions)
+possible_actions = ["rock", "paper", "scissors"]
+computer_action = random.choice(possible_actions)
 
 # 3. Compare the choices
-print("\nYou chose " + userAction + " and the computer chose " + computerAction + "\n")
+print("\nYou chose " + user_action + " and the computer chose " + computer_action + "\n")
 
 # 4. And print the winner
-if userAction == computerAction: # Tie
-    print("Both players selected " + userAction + ". It's a tie!") 
-elif userAction == "rock": # Player choices rock
-    if computerAction == "scissors":
+if user_action == computer_action: # Tie
+    print("Both players selected " + user_action + ". It's a tie!") 
+elif user_action == "rock": # Player choices rock
+    if computer_action == "scissors":
         print("Rock smashes scissors! You win!")
     else:
         print("Paper covers rock! You lose.")
-elif userAction == "paper": # Player choices paper
-    if computerAction == "rock":
+elif user_action == "paper": # Player choices paper
+    if computer_action == "rock":
         print("Paper covers rock! You win!")
     else:
         print("Scissors cuts paper! You lose.")
-elif userAction == "scissors": # Player choices scissors
-    if computerAction == "paper":
+elif user_action == "scissors": # Player choices scissors
+    if computer_action == "paper":
         print("Scissors cuts paper! You win!")
     else:
         print("Rock smashes scissors! You lose.")
 
-# BONUS: What if the user inputs a choice that is not valid?
+# What if the user inputs a choice that is not valid?
 else:
     print("Invalid choice")
